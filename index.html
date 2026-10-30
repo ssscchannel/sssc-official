@@ -1,37 +1,32 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>晟自然</title>
-  <meta name="description" content="晟自然｜自然科學習與互動系統">
-  <style>
-    :root{--bg:#f6f8f7;--ink:#24332f;--muted:#6d7c77;--card:#fff;--line:#dfe7e3;--accent:#3f7668;--soft:#e9f1ee}
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink)}
-    .shell{min-height:100vh;display:flex;flex-direction:column}.top{padding:22px 6vw;border-bottom:1px solid var(--line);background:rgba(255,255,255,.9)}
-    .brand{font-size:24px;font-weight:800;letter-spacing:.08em}.brand small{display:block;margin-top:4px;font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--muted)}
-    main{width:min(1100px,88vw);margin:auto;padding:64px 0 80px}.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.12em;font-size:13px}
-    h1{font-size:clamp(36px,6vw,70px);line-height:1.08;margin:12px 0 18px;letter-spacing:-.04em}.lead{font-size:18px;line-height:1.8;color:var(--muted);max-width:680px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}.card{display:block;padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--card);color:inherit;text-decoration:none;transition:.18s ease;min-height:170px}.card:hover{transform:translateY(-3px);border-color:#b9cbc4;box-shadow:0 12px 30px rgba(36,51,47,.08)}
-    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--soft);color:var(--accent);font-size:12px;font-weight:800}.card h2{margin:18px 0 8px;font-size:21px}.card p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}.disabled{opacity:.58;pointer-events:none}
-    footer{padding:22px 6vw;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
-    @media(max-width:760px){.grid{grid-template-columns:1fr}main{padding-top:46px}.card{min-height:auto}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>晟自然｜看懂世界，比記住答案更重要</title>
+<meta name="description" content="晟自然｜國小、國中自然科學習、互動探索、考古題與線上課程。">
+<style>
+:root{--paper:#f5f1e8;--ink:#16231f;--muted:#69736f;--green:#315e50;--lime:#dce9a9;--sun:#f2c95c;--night:#101b1c;--white:#fffdf8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;overflow-x:hidden}a{color:inherit}.wrap{width:min(1180px,88vw);margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;position:absolute;z-index:10;left:6vw;right:6vw}.logo{font-weight:900;font-size:23px;letter-spacing:.08em}.logo span{display:block;font-size:9px;letter-spacing:.22em;font-weight:600;color:#66716c}.links{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}.links a{text-decoration:none}
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;padding:120px 0 70px}.hero-copy{position:relative;z-index:2;width:68%}.kicker{font-size:12px;letter-spacing:.25em;font-weight:800;color:var(--green);margin-bottom:22px}.hero h1{font-size:clamp(58px,9.5vw,132px);line-height:.86;letter-spacing:-.075em;margin:0;font-weight:900}.hero h1 i{font-style:normal;color:var(--green)}.hero p{font-size:clamp(18px,2vw,27px);font-weight:700;line-height:1.55;margin:30px 0 0}.hero p small{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:12px}.orb{position:absolute;width:min(38vw,480px);aspect-ratio:1;border-radius:50%;right:-7vw;top:18%;background:radial-gradient(circle at 35% 30%,#fff8d8 0 10%,var(--sun) 11% 34%,#d7e7a0 35% 64%,#84ad91 65% 100%);opacity:.82}.orbit{position:absolute;width:125%;height:55%;border:1px solid rgba(22,35,31,.2);border-radius:50%;left:-12%;top:23%;transform:rotate(-18deg)}.dot{width:18px;height:18px;background:var(--ink);border-radius:50%;position:absolute;right:12%;top:25%}.scroll{position:absolute;bottom:28px;left:6vw;font-size:10px;letter-spacing:.18em;writing-mode:vertical-rl;color:var(--muted)}
+.statement{padding:140px 0 160px;background:var(--white)}.statement .tiny{font-size:11px;letter-spacing:.22em;color:var(--green);font-weight:800}.statement h2{font-size:clamp(36px,6vw,80px);line-height:1.13;max-width:950px;margin:24px 0 0;letter-spacing:-.04em}.statement h2 span{color:#9aa39f}
+.play{background:var(--night);color:#f7f4e9;padding:120px 0 130px;position:relative;overflow:hidden}.play:before{content:"";position:absolute;width:420px;height:420px;border:1px solid #48615c;border-radius:50%;right:-120px;top:-100px;box-shadow:0 0 0 70px rgba(255,255,255,.018),0 0 0 140px rgba(255,255,255,.012)}.section-label{font-size:11px;letter-spacing:.24em;font-weight:800;opacity:.65}.play-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:8vw;align-items:end}.play h2{font-size:clamp(64px,11vw,150px);line-height:.82;letter-spacing:-.07em;margin:24px 0 30px}.play h2 em{font-style:normal;color:var(--lime)}.play-copy{padding-bottom:10px}.play-copy h3{font-size:28px;margin:0 0 15px}.play-copy p{color:#aebcb7;line-height:1.8;margin:0 0 28px}.btn{display:inline-flex;align-items:center;gap:16px;text-decoration:none;font-weight:800;font-size:13px;padding:14px 0;border-bottom:1px solid currentColor}.btn b{font-size:20px}
+.learn{padding:140px 0}.head-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:80px}.head-row h2{font-size:clamp(55px,8vw,105px);line-height:.9;letter-spacing:-.06em;margin:10px 0 0}.head-row p{max-width:360px;color:var(--muted);line-height:1.8}.paths{display:grid;grid-template-columns:1.15fr .85fr;gap:3vw}.path{border-top:1px solid #aeb7b3;padding:28px 0 70px;position:relative}.path:nth-child(2){margin-top:120px}.num{font-size:11px;color:var(--muted)}.path h3{font-size:clamp(28px,4vw,52px);margin:42px 0 12px;letter-spacing:-.035em}.path p{max-width:460px;color:var(--muted);line-height:1.75}.path a{text-decoration:none;font-size:13px;font-weight:800}.mark{font-size:80px;position:absolute;right:10px;top:15px;font-weight:200;color:#bdc9c3}
+.classroom{padding:130px 0;background:#dce6d7}.classroom h2{font-size:clamp(52px,8vw,104px);margin:12px 0 70px;letter-spacing:-.06em}.classes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #899b92}.course{padding:30px 28px 50px 0;border-right:1px solid #899b92;min-height:240px}.course+.course{padding-left:28px}.course:last-child{border-right:0}.course small{font-weight:800;letter-spacing:.12em}.course h3{font-size:27px;margin:55px 0 12px}.course p{font-size:14px;color:#53625c;line-height:1.7}
+.about{background:var(--white);padding:150px 0}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw}.about h2{font-size:15px;letter-spacing:.18em;margin:0}.about blockquote{font-size:clamp(34px,5vw,65px);line-height:1.2;letter-spacing:-.04em;margin:0}.about blockquote strong{color:var(--green)}.about p{font-size:16px;line-height:2;color:var(--muted);max-width:650px;margin-top:42px}
+.connect{padding:110px 0 70px}.connect h2{font-size:clamp(48px,8vw,100px);margin:10px 0 60px;letter-spacing:-.06em}.socials{border-top:1px solid #aeb7b3}.social{display:flex;justify-content:space-between;align-items:center;padding:25px 0;border-bottom:1px solid #aeb7b3;text-decoration:none;font-size:22px;font-weight:800}.social span:last-child{font-size:20px}.foot{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;padding-top:80px}.reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.8,.2,1)}.reveal.on{opacity:1;transform:none}
+@media(max-width:760px){.links{display:none}.nav{height:66px}.hero{padding-top:100px}.hero-copy{width:100%}.hero h1{font-size:18vw}.hero p{font-size:18px}.orb{width:70vw;right:-35vw;top:16%;opacity:.45}.statement{padding:95px 0}.play{padding:90px 0}.play-grid,.paths,.about-grid{grid-template-columns:1fr}.play-copy{max-width:90%}.head-row{display:block;margin-bottom:45px}.head-row p{margin-top:28px}.path:nth-child(2){margin-top:0}.path{padding-bottom:55px}.classes{grid-template-columns:1fr}.course,.course+.course{padding:28px 0;border-right:0;border-bottom:1px solid #899b92;min-height:auto}.course h3{margin-top:30px}.classroom,.about{padding:95px 0}.about-grid{gap:55px}.foot{gap:20px;flex-direction:column}}
+</style>
 </head>
 <body>
-<div class="shell">
-  <header class="top"><div class="brand">晟自然<small>SSSC NATURAL SCIENCE</small></div></header>
-  <main>
-    <div class="eyebrow">晟自然學習入口</div>
-    <h1>看懂世界，<br>比記住答案更重要。</h1>
-    <p class="lead">把晟自然的學習工具、測驗與考古題整理在同一個入口。既有系統維持原本運作，新網站先從清楚、好找、好用開始。</p>
-    <section class="grid">
-      <a class="card" href="https://ssscchannel.github.io/daq/" target="_blank" rel="noopener"><span class="tag">已上線</span><h2>考古題系統</h2><p>從既有題庫進入歷屆題目與練習內容。</p></a>
-      <div class="card disabled"><span class="tag">入口預留</span><h2>測驗系統</h2><p>保留既有線上測驗入口，確認正式網址後直接接上。</p></div>
-      <div class="card disabled"><span class="tag">持續整合</span><h2>互動學習</h2><p>未來將既有互動項目統一視覺與操作方式，工作區依功能保留差異。</p></div>
-    </section>
-  </main>
-  <footer>© 晟自然｜自然科學習與互動系統</footer>
-</div>
-</body>
-</html>
+<header class="nav"><div class="logo">晟自然<span>SSSC NATURAL SCIENCE</span></div><nav class="links"><a href="#play">玩科學</a><a href="#learn">學自然</a><a href="#class">一起上課</a><a href="#about">關於晟自然</a></nav></header>
+<main>
+<section class="hero"><div class="wrap"><div class="hero-copy"><div class="kicker">SCIENCE IS EVERYWHERE.</div><h1>看懂<i>世界</i><br>比記住答案<br>更重要。</h1><p>自然，不只在課本裡。<small>從一個問題開始，把世界真的看懂。</small></p></div></div><div class="orb"><div class="orbit"><i class="dot"></i></div></div><div class="scroll">SCROLL TO EXPLORE ↓</div></section>
+<section class="statement"><div class="wrap reveal"><div class="tiny">WHY SSSC?</div><h2>我們不是把自然變簡單，<br>而是把複雜的世界，<br><span>變得可以理解。</span></h2></div></section>
+<section class="play" id="play"><div class="wrap play-grid reveal"><div><div class="section-label">01 / PLAY — 玩科學</div><h2>PLAY<br>WITH<br><em>SCIENCE.</em></h2></div><div class="play-copy"><h3>把課本裡的自然，真的動起來。</h3><p>從月相、光、電路到各種自然現象，用互動模擬去試、去看、去發現。這裡不是另一頁課本，而是一座數位自然實驗室。</p><a class="btn" href="https://ssscchannel.github.io/ssscsystem/" target="_blank" rel="noopener">進入「晟自然玩科學」 <b>↗</b></a></div></div></section>
+<section class="learn" id="learn"><div class="wrap"><div class="head-row reveal"><div><div class="section-label">02 / LEARN — 學自然</div><h2>學習，<br>不只一條路。</h2></div><p>理解觀念之後，用題目驗證；遇到不懂的地方，再回頭找到真正卡住的那一步。</p></div><div class="paths"><article class="path reveal"><span class="num">A / EXAM ARCHIVE</span><span class="mark">↗</span><h3>考古題資料庫</h3><p>把歷屆題目變成可以搜尋、整理與練習的學習資源。</p><a href="https://ssscchannel.github.io/daq/" target="_blank" rel="noopener">開始探索 →</a></article><article class="path reveal"><span class="num">B / QUICK TEST</span><span class="mark">○</span><h3>自然科線上測驗</h3><p>用短而精準的測驗確認理解程度，讓練習不只是一直刷題。</p><span style="font-size:13px;color:#7b8581">入口整理中</span></article></div></div></section>
+<section class="classroom" id="class"><div class="wrap"><div class="section-label">03 / CLASS — 一起上課</div><h2 class="reveal">把「懂了」<br>帶進考場。</h2><div class="classes reveal"><div class="course"><small>ELEMENTARY</small><h3>國小自然</h3><p>從觀察與生活經驗建立真正的自然科理解。</p></div><div class="course"><small>JUNIOR HIGH</small><h3>國中自然</h3><p>整理觀念、破解迷思，建立能應付題目變化的思考方式。</p></div><div class="course"><small>ONLINE</small><h3>線上課程</h3><p>讓不同地區的學生，也能用自己的節奏跟上晟自然。</p></div></div></div></section>
+<section class="about" id="about"><div class="wrap about-grid reveal"><h2>ABOUT<br>晟自然</h2><div><blockquote>答案只有一個，<br>但<strong>理解世界</strong>的方法，<br>可以很多。</blockquote><p>晟自然從國小到國中，把課堂、講義、題目與數位工具放在同一件事情上：讓學生知道「為什麼」。當觀念真的連起來，記憶不再是學自然唯一的方法。</p></div></div></section>
+<section class="connect"><div class="wrap"><div class="section-label">04 / CONNECT</div><h2 class="reveal">繼續一起<br>看懂世界。</h2><div class="socials reveal"><div class="social"><span>LINE 官方帳號</span><span>→</span></div><a class="social" href="https://www.youtube.com/@sssc_channel" target="_blank" rel="noopener"><span>YouTube</span><span>↗</span></a><div class="social"><span>Facebook</span><span>→</span></div></div><div class="foot"><span>© 2026 晟自然 SSSC NATURAL SCIENCE</span><span>看懂世界，比記住答案更重要。</span></div></div></section>
+</main>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));</script>
+</body></html>
