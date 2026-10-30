@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>晟自然</title>
+  <meta name="description" content="晟自然｜自然科學習與互動系統">
+  <style>
+    :root{--bg:#f6f8f7;--ink:#24332f;--muted:#6d7c77;--card:#fff;--line:#dfe7e3;--accent:#3f7668;--soft:#e9f1ee}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink)}
+    .shell{min-height:100vh;display:flex;flex-direction:column}.top{padding:22px 6vw;border-bottom:1px solid var(--line);background:rgba(255,255,255,.9)}
+    .brand{font-size:24px;font-weight:800;letter-spacing:.08em}.brand small{display:block;margin-top:4px;font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--muted)}
+    main{width:min(1100px,88vw);margin:auto;padding:64px 0 80px}.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.12em;font-size:13px}
+    h1{font-size:clamp(36px,6vw,70px);line-height:1.08;margin:12px 0 18px;letter-spacing:-.04em}.lead{font-size:18px;line-height:1.8;color:var(--muted);max-width:680px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}.card{display:block;padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--card);color:inherit;text-decoration:none;transition:.18s ease;min-height:170px}.card:hover{transform:translateY(-3px);border-color:#b9cbc4;box-shadow:0 12px 30px rgba(36,51,47,.08)}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--soft);color:var(--accent);font-size:12px;font-weight:800}.card h2{margin:18px 0 8px;font-size:21px}.card p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}.disabled{opacity:.58;pointer-events:none}
+    footer{padding:22px 6vw;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}main{padding-top:46px}.card{min-height:auto}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header class="top"><div class="brand">晟自然<small>SSSC NATURAL SCIENCE</small></div></header>
+  <main>
+    <div class="eyebrow">晟自然學習入口</div>
+    <h1>看懂世界，<br>比記住答案更重要。</h1>
+    <p class="lead">把晟自然的學習工具、測驗與考古題整理在同一個入口。既有系統維持原本運作，新網站先從清楚、好找、好用開始。</p>
+    <section class="grid">
+      <a class="card" href="https://ssscchannel.github.io/daq/" target="_blank" rel="noopener"><span class="tag">已上線</span><h2>考古題系統</h2><p>從既有題庫進入歷屆題目與練習內容。</p></a>
+      <div class="card disabled"><span class="tag">入口預留</span><h2>測驗系統</h2><p>保留既有線上測驗入口，確認正式網址後直接接上。</p></div>
+      <div class="card disabled"><span class="tag">持續整合</span><h2>互動學習</h2><p>未來將既有互動項目統一視覺與操作方式，工作區依功能保留差異。</p></div>
+    </section>
+  </main>
+  <footer>© 晟自然｜自然科學習與互動系統</footer>
+</div>
+</body>
+</html>
