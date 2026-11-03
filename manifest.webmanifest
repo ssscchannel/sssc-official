@@ -1,0 +1,19 @@
+{
+  "name": "晟自然玩科學",
+  "short_name": "晟自然玩科學",
+  "description": "晟自然｜看懂世界，比記住答案更重要。",
+  "lang": "zh-TW",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#f5f1e8",
+  "icons": [
+    {
+      "src": "head.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
