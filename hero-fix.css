@@ -545,3 +545,62 @@
   .classroom .course-online{bottom:10%}
   .classroom::after{bottom:7%;height:26svh}
 }
+
+/* CLASS mobile portrait v2 — expressive course hierarchy and balanced action/mascot pairing. */
+@media(max-width:760px) and (orientation:portrait){
+  .classroom .course-core{top:40%}
+  .classroom .course-advanced{top:51.8%}
+  .classroom .course-kicker{margin-bottom:9px;font-size:10px}
+  .classroom .course-name{
+    width:max-content;max-width:100%;
+    font-size:clamp(20px,5.6vw,24px);
+    line-height:1.3;
+    padding:3px 0 7px;
+    border-bottom:1px solid rgba(49,94,80,.32);
+    white-space:nowrap;
+  }
+  .classroom .course-core .course-name br{display:none}
+  .classroom .course-advanced .course-name br{display:initial}
+  .classroom .course-name::after{
+    content:"☝";display:inline-block;position:relative;
+    left:auto;right:auto;top:-1px;
+    margin-left:9px;font-size:19px;line-height:1;
+    color:#315e50;vertical-align:middle;
+    animation:classTapNudge 2.7s ease-in-out infinite;
+  }
+  .classroom .course-advanced .course-name::after{animation-delay:-1.2s}
+  .classroom .course-online{
+    left:0!important;right:auto!important;
+    width:52%!important;bottom:12%;
+  }
+  .classroom .course-actions{gap:13px;align-items:flex-start}
+  .classroom .course-actions-row{
+    display:flex;flex-direction:column;
+    align-items:flex-start;flex-wrap:nowrap;
+    gap:14px;
+  }
+  .classroom .course-action{
+    font-size:clamp(16px,4.4vw,19px);
+    padding:6px 0 8px;
+    min-width:0;
+  }
+  .classroom::after{
+    left:auto;right:2.5vw;top:auto;bottom:6.5%;
+    width:47vw;height:32svh;
+    background-size:contain;background-position:center bottom;
+  }
+}
+@keyframes classTapNudge{
+  0%,100%{transform:translateY(0)}
+  45%{transform:translateY(-3px)}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .classroom .course-core{top:38.5%}
+  .classroom .course-advanced{top:50%}
+  .classroom .course-name{font-size:clamp(19px,5.25vw,22px)}
+  .classroom .course-online{bottom:10%}
+  .classroom::after{bottom:5%;height:30svh}
+}
+@media(prefers-reduced-motion:reduce){
+  .classroom .course-name::after{animation:none}
+}
