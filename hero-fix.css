@@ -235,3 +235,47 @@
   .whyplay .playbox h2{font-size:clamp(58px,16vw,70px);margin:12px 0 16px}
   .whyplay .play-desc-mobile{line-height:1.65;margin-bottom:12px}
 }
+
+/* WHY/PLAY mobile portrait v2 — circuit diagram with subtle moving current. */
+.play-circuit-art{display:none}
+@keyframes playCircuitFlow{to{stroke-dashoffset:-180}}
+@media(max-width:760px) and (orientation:portrait){
+  .whyplay{isolation:isolate}
+  .whyplay .play-circuit-art{
+    display:block;position:absolute;inset:0;width:100%;height:100%;
+    z-index:0;pointer-events:none;overflow:hidden;
+  }
+  .whyplay .whyplay-grid{position:relative;z-index:2}
+  .play-circuit-art .circuit-wires path{
+    fill:none;stroke:#719589;stroke-width:1.25;opacity:.38;
+    stroke-linecap:round;stroke-linejoin:round;
+  }
+  .play-circuit-art .circuit-current path{
+    fill:none;stroke:url(#play-current);stroke-width:2.2;
+    stroke-dasharray:3 175;stroke-dashoffset:0;
+    stroke-linecap:round;opacity:.88;
+    animation:playCircuitFlow 9s linear infinite;
+  }
+  .play-circuit-art .circuit-current path:nth-child(2){animation-delay:-3s}
+  .play-circuit-art .circuit-current path:nth-child(3){animation-delay:-5s}
+  .play-circuit-art .circuit-nodes circle{fill:#9abcaa;opacity:.55}
+  .play-circuit-art .circuit-symbols{fill:none;stroke:#a7c3b2;stroke-width:1.4;opacity:.54}
+  /* This extension grows directly from the CTA underline, so it stays connected across widths. */
+  .whyplay .playbox .btn{
+    position:relative;z-index:3;
+  }
+  .whyplay .playbox .btn::after{
+    content:"";position:absolute;left:100%;bottom:-1px;
+    width:clamp(72px,31vw,125px);height:clamp(40px,7svh,67px);
+    border-bottom:1px solid rgba(0,210,255,.62);
+    border-right:1px solid rgba(0,210,255,.40);
+    border-bottom-right-radius:26px;
+    pointer-events:none;
+  }
+}
+@media(max-width:760px) and (orientation:portrait) and (max-width:360px){
+  .whyplay .playbox .btn::after{width:22vw}
+}
+@media(prefers-reduced-motion:reduce){
+  .play-circuit-art .circuit-current path{animation:none;stroke-dasharray:none;opacity:.4}
+}
