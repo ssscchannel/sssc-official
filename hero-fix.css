@@ -662,3 +662,32 @@
 @media(prefers-reduced-motion:reduce){
   .classroom .course-name::after{animation:none}
 }
+
+/* CLASS mobile portrait v4 — borderless tapped course names, mirror Titi and swap with information. */
+@media(max-width:760px) and (orientation:portrait){
+  .classroom .course-name:focus,
+  .classroom .course-name:focus-visible{
+    outline:0!important;
+    box-shadow:none!important;
+  }
+  .classroom .course-name:focus-visible{
+    border-bottom-color:#315e50;
+    border-bottom-width:2px;
+  }
+  .classroom::after{
+    left:0;right:auto;bottom:2%;
+    width:67vw;height:43svh;
+    transform:scaleX(-1);
+    transform-origin:center center;
+  }
+  .classroom .course-online{
+    left:auto!important;right:0!important;
+    width:42%!important;bottom:12%;
+  }
+  .classroom .course-actions{align-items:flex-start}
+  .classroom .course-actions-row{align-items:flex-start}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .classroom::after{left:0;right:auto;bottom:1%;width:64vw;height:39svh}
+  .classroom .course-online{left:auto!important;right:0!important;bottom:9%}
+}
