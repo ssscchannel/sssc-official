@@ -1204,3 +1204,22 @@
     padding-top:21px;
   }
 }
+
+/* LEARN mobile portrait v7 — underline follows the text width, not padded link width. */
+@media(max-width:760px) and (orientation:portrait){
+  .learn .path a{
+    display:inline-block;
+    width:max-content;
+    max-width:100%;
+    padding:5px 0 8px;
+    white-space:nowrap;
+  }
+  .learn .path a::after,
+  .learn .path:nth-child(2) a::after{
+    left:0;right:auto;
+    width:100%;
+    bottom:2px;
+    transform:scaleX(1);
+    transform-origin:left center;
+  }
+}
