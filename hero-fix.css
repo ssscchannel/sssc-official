@@ -1235,3 +1235,9 @@
 @media(max-width:760px) and (orientation:portrait) and (prefers-reduced-motion:reduce){
   .track{transition-duration:.01ms}
 }
+
+/* MOBILE PAGE NAVIGATION v2 — handle live touch motion on iOS/Android; keep dialogs scrollable. */
+@media(max-width:760px) and (orientation:portrait){
+  .viewport,.track,.screen{touch-action:pan-x}
+  .class-course-modal[open],.about-mobile-dialog[open]{touch-action:pan-y}
+}
