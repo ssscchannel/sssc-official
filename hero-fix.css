@@ -691,3 +691,20 @@
   .classroom::after{left:0;right:auto;bottom:1%;width:64vw;height:39svh}
   .classroom .course-online{left:auto!important;right:0!important;bottom:9%}
 }
+
+/* CLASS mobile portrait v5 — advanced course on one line; extra space beside Titi. */
+@media(max-width:760px) and (orientation:portrait){
+  .classroom .course-advanced .course-name br{display:none}
+  .classroom .course-advanced .course-name{
+    font-size:clamp(17px,4.8vw,20px);
+    letter-spacing:-.055em;
+    white-space:nowrap;
+  }
+  .classroom::after{
+    left:-16px;right:auto;
+  }
+}
+@media(max-width:760px) and (orientation:portrait) and (max-width:360px){
+  .classroom .course-advanced .course-name{font-size:clamp(16px,4.65vw,17px)}
+  .classroom::after{left:-12px}
+}
