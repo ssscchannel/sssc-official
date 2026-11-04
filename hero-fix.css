@@ -194,3 +194,11 @@
 @media(prefers-reduced-motion:reduce){
   .hero .compass .needle{animation:none}
 }
+
+/* HERO mobile portrait v7: subtle warm-white text outline for legibility. */
+@media(max-width:760px) and (orientation:portrait){
+  .hero h1{
+    -webkit-text-stroke:2px #fffdf8;
+    paint-order:stroke fill;
+  }
+}
