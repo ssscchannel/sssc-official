@@ -60,3 +60,43 @@
   .hero-mascot.tail,.hero-mascot.head{bottom:11svh}
   .lab{bottom:21svh;height:27svh}
 }
+
+/* HERO mobile portrait v3: breathing room, one mascot and aligned telescope target. */
+@media(max-width:760px) and (orientation:portrait){
+  .hero{padding-top:clamp(119px,15svh,145px)}
+  .hero-mascot.tail{display:none!important}
+  .hero-mascot.head{display:block!important;right:-8vw;bottom:12svh;width:clamp(220px,61vw,330px)}
+  /* Lab occupies HERO as positioning canvas; ring and compass share an exact center. */
+  .hero .lab{
+    --orbit-d:clamp(166px,49vw,208px);
+    --compass-d:clamp(82px,25vw,108px);
+    --ring-x:8vw;
+    --ring-bottom:26svh;
+    inset:0;width:100%;height:100%;opacity:1;z-index:2;pointer-events:none;
+  }
+  .hero .moon-orbit{
+    top:auto;right:auto;left:var(--ring-x);bottom:var(--ring-bottom);
+    width:var(--orbit-d);height:var(--orbit-d);
+    border-color:rgba(146,167,156,.65);
+  }
+  .hero .compass{
+    top:auto;right:auto;
+    left:calc(var(--ring-x) + (var(--orbit-d) - var(--compass-d))/2);
+    bottom:calc(var(--ring-bottom) + (var(--orbit-d) - var(--compass-d))/2);
+    width:var(--compass-d);height:var(--compass-d);
+    background:rgba(255,253,248,.45);border-color:rgba(117,147,132,.78);
+  }
+  .hero .moon{left:calc(50% - 17px);top:-17px;width:34px;height:34px;transform-origin:17px calc(var(--orbit-d)/2 + 17px)}
+  .hero .pluspop{
+    top:44%;bottom:auto;left:57%;right:auto;transform:none;opacity:.9;
+  }
+  .hero .particle.p1{top:46%;bottom:auto;left:74%}
+  .hero .particle.p2{top:52%;bottom:auto;left:66%}
+  .hero .particle.p3{top:49%;bottom:auto;left:84%}
+  .hero .particle.p4{top:54%;bottom:auto;left:79%}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .hero{padding-top:clamp(100px,14svh,120px)}
+  .hero .lab{--ring-bottom:24svh;--orbit-d:clamp(150px,45vw,180px)}
+  .hero-mascot.head{bottom:11svh}
+}
