@@ -725,3 +725,11 @@
   .classroom::after{bottom:4%}
   .classroom .course-online{bottom:12%}
 }
+
+/* CLASS mobile portrait v7 — separate CORE from header, tighten spacing to ADVANCED. */
+@media(max-width:760px) and (orientation:portrait){
+  .classroom .course-core{top:42%!important}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .classroom .course-core{top:40.5%!important}
+}
