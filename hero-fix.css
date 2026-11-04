@@ -1134,3 +1134,34 @@
 @media(prefers-reduced-motion:reduce){
   .play-circuit-art .circuit-loop-flow,.play-circuit-art .circuit-cta-flow{animation:none;opacity:.18}
 }
+
+/* CLASS mobile portrait v3 — show both course introductions in either modal entry. */
+@media(max-width:760px) and (orientation:portrait){
+  .class-course-modal #class-course-modal-content{
+    display:grid;
+    gap:20px;
+  }
+  .class-course-modal .class-modal-course{
+    min-width:0;
+  }
+  .class-course-modal .class-modal-course + .class-modal-course{
+    border-top:1px solid rgba(49,94,80,.22);
+    padding-top:20px;
+  }
+  .class-course-modal #class-course-modal-content .class-modal-course>.course-info-label{
+    display:none;
+  }
+  .class-course-modal #class-course-modal-content .class-modal-course strong{
+    display:block;
+    font-size:clamp(17px,4.6vw,20px);
+    line-height:1.4;
+    margin-bottom:12px;
+  }
+  .class-course-modal #class-course-modal-content .class-modal-course ul{
+    gap:9px;
+  }
+  .class-course-modal #class-course-modal-content .class-modal-course li{
+    font-size:clamp(12px,3.5vw,14px);
+    line-height:1.62;
+  }
+}
