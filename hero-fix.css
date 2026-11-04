@@ -279,3 +279,15 @@
 @media(prefers-reduced-motion:reduce){
   .play-circuit-art .circuit-current path{animation:none;stroke-dasharray:none;opacity:.4}
 }
+
+/* WHY/PLAY mobile portrait v3 — one coherent closed circuit with familiar symbols. */
+@media(max-width:760px) and (orientation:portrait){
+  .play-circuit-art .circuit-wires path{opacity:.47;stroke:#7c9f92}
+  .play-circuit-art .circuit-current path{stroke-width:2;stroke-dasharray:3 175;opacity:.75}
+  .play-circuit-art .circuit-current path:nth-child(4){animation-delay:-6.5s}
+  .play-circuit-art .circuit-nodes circle{opacity:.48}
+  .play-circuit-art .circuit-symbols{stroke:#b6cbbb;stroke-width:1.5;opacity:.7}
+  .play-circuit-art .circuit-bulb{stroke:#dce9a9}
+  .play-circuit-art .circuit-battery{stroke:#a8c5b6}
+  .play-circuit-art .circuit-cta-bridge{stroke:#00d2ff;opacity:.58}
+}
