@@ -343,3 +343,41 @@
   .learn .path h3{margin:14px 0 9px}
   .learn .path p{margin-bottom:11px}
 }
+
+/* LEARN mobile portrait v2 — B+C: bold diagonal composition + larger system titles. */
+@media(max-width:760px) and (orientation:portrait){
+  .learn::before{
+    clip-path:polygon(0 77%,100% 43%,100% 100%,0 100%);
+  }
+  .learn .head-row{top:14%!important}
+  .learn .path:first-child{
+    top:34%!important;
+    max-width:100%;
+  }
+  .learn .path:nth-child(2){
+    top:62%!important;
+    max-width:100%;
+  }
+  .learn .path h3{
+    font-size:clamp(36px,10vw,43px);
+    line-height:1.08;
+    margin:17px 0 13px;
+    letter-spacing:-.025em;
+  }
+  .learn .path:first-child p{max-width:min(78vw,330px)}
+  .learn .path:nth-child(2) p{
+    max-width:min(78vw,320px);
+    margin-left:auto;
+  }
+  .learn .path .num{letter-spacing:.11em}
+  .learn .path a{font-size:clamp(14px,3.8vw,16px)}
+  .learn .path:first-child .mark{right:4%;top:10px}
+  .learn .path:nth-child(2) .mark{right:1%;top:4px}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .learn .head-row{top:12%!important}
+  .learn .path:first-child{top:33%!important}
+  .learn .path:nth-child(2){top:61%!important}
+  .learn .path h3{font-size:clamp(32px,9.5vw,39px);margin:12px 0 9px}
+  .learn .path p{font-size:clamp(11px,3.2vw,13px);margin-bottom:10px}
+}
