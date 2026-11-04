@@ -1077,3 +1077,25 @@
   .last .footer-brand{padding-top:7px}
   .last .fixed-foot{bottom:1.5%}
 }
+
+/* ABOUT mobile portrait v5 — taller, slightly raised portrait and closer arrowless social links. */
+@media(max-width:760px) and (orientation:portrait){
+  .last .about-mobile-social{
+    transform:translateX(12px);
+    width:calc(100% - 12px);
+  }
+  .last .about-social-row{justify-content:flex-start}
+  .last .about-social-arrow{display:none!important}
+  .last .about-mobile-portrait{
+    width:167%;
+    height:calc(100% + 34px);
+    transform:translateY(-30px);
+    background-position:center bottom;
+  }
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .last .about-mobile-portrait{
+    height:calc(100% + 24px);
+    transform:translateY(-21px);
+  }
+}
