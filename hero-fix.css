@@ -100,3 +100,42 @@
   .hero .lab{--ring-bottom:24svh;--orbit-d:clamp(150px,45vw,180px)}
   .hero-mascot.head{bottom:11svh}
 }
+
+/* HERO mobile portrait v4: exchange the two decorative groups. */
+@media(max-width:760px) and (orientation:portrait){
+  /* Large concentric orbital target, centered upper-right and intentionally cropped. */
+  .hero .lab{
+    --orbit-d:clamp(270px,77vw,365px);
+    --compass-d:clamp(114px,35vw,156px);
+    --ring-x:calc(83% - var(--orbit-d)/2);
+    --ring-bottom:34svh;
+  }
+  .hero .moon-orbit{
+    left:var(--ring-x);bottom:var(--ring-bottom);
+    width:var(--orbit-d);height:var(--orbit-d);
+    border-color:rgba(146,167,156,.62);
+  }
+  .hero .compass{
+    left:calc(var(--ring-x) + (var(--orbit-d) - var(--compass-d))/2);
+    bottom:calc(var(--ring-bottom) + (var(--orbit-d) - var(--compass-d))/2);
+    width:var(--compass-d);height:var(--compass-d);
+  }
+  .hero .moon{animation:moonTravel 8s linear infinite}
+  /* Four colored points frame the A++ cluster near the telescope's sightline. */
+  .hero .pluspop{
+    left:34%;top:71%;bottom:auto;transform:translate(-50%,-50%);
+    opacity:1;text-align:center;
+  }
+  .hero .particle.p1{left:24%;top:67%;bottom:auto}
+  .hero .particle.p2{left:46%;top:70%;bottom:auto}
+  .hero .particle.p3{left:26%;top:77%;bottom:auto}
+  .hero .particle.p4{left:47%;top:76%;bottom:auto}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .hero .lab{--orbit-d:clamp(245px,73vw,330px);--ring-bottom:33svh}
+  .hero .pluspop{top:70%}
+  .hero .particle.p1{top:66%}
+  .hero .particle.p2{top:69%}
+  .hero .particle.p3{top:76%}
+  .hero .particle.p4{top:75%}
+}
