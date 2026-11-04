@@ -708,3 +708,20 @@
   .classroom .course-advanced .course-name{font-size:clamp(16px,4.65vw,17px)}
   .classroom::after{left:-12px}
 }
+
+/* CLASS mobile portrait v6 — stronger single-line advanced heading; lift paired bottom elements. */
+@media(max-width:760px) and (orientation:portrait){
+  .classroom .course-advanced .course-name{
+    font-size:clamp(19px,5.35vw,22px);
+    letter-spacing:-.055em;
+  }
+  .classroom::after{bottom:5%}
+  .classroom .course-online{bottom:15%}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-width:360px){
+  .classroom .course-advanced .course-name{font-size:clamp(17px,4.95vw,19px)}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .classroom::after{bottom:4%}
+  .classroom .course-online{bottom:12%}
+}
