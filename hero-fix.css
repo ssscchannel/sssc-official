@@ -381,3 +381,51 @@
   .learn .path h3{font-size:clamp(32px,9.5vw,39px);margin:12px 0 9px}
   .learn .path p{font-size:clamp(11px,3.2vw,13px);margin-bottom:10px}
 }
+
+/* LEARN mobile portrait v3: stronger titles, intentional copy breaks and balanced animated marks.
+   Do not change the approved header, headline or diagonal. */
+.learn .learn-desc-mobile{display:none}
+@media(max-width:760px) and (orientation:portrait){
+  .learn .path .learn-desc-desktop{display:none}
+  .learn .path .learn-desc-mobile{
+    display:block;
+    max-width:none;
+    font-size:clamp(13px,3.55vw,15px);
+    line-height:1.65;
+    margin:0 0 14px;
+    white-space:normal;
+  }
+  .learn .path .learn-desc-mobile span{display:block;white-space:nowrap}
+  .learn .path h3{
+    font-size:clamp(42px,11.7vw,50px);
+    line-height:1.08;
+    letter-spacing:-.045em;
+    white-space:nowrap;
+    margin:18px 0 13px;
+  }
+  .learn .path:first-child{top:33%!important}
+  .learn .path:nth-child(2){top:61%!important}
+  .learn .path:first-child .mark{
+    width:clamp(148px,42vw,192px);
+    height:clamp(148px,42vw,192px);
+    right:-9%;left:auto;top:68px;
+  }
+  .learn .path:nth-child(2) .mark{
+    width:clamp(150px,44vw,195px);
+    height:clamp(150px,44vw,195px);
+    left:-8%;right:auto;top:63px;
+  }
+  .learn .path a{font-size:clamp(15px,4vw,17px)}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-width:370px){
+  .learn .path h3{font-size:clamp(38px,11.2vw,43px)}
+  .learn .path .learn-desc-mobile{font-size:12px}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .learn .path:first-child{top:32%!important}
+  .learn .path:nth-child(2){top:59%!important}
+  .learn .path h3{font-size:clamp(35px,10.5vw,44px);margin:11px 0 8px}
+  .learn .path .learn-desc-mobile{font-size:clamp(11px,3.15vw,13px);line-height:1.45;margin-bottom:8px}
+  .learn .path:first-child .mark{top:45px}
+  .learn .path:nth-child(2) .mark{top:45px}
+}
