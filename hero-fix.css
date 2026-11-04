@@ -139,3 +139,27 @@
   .hero .particle.p3{top:76%}
   .hero .particle.p4{top:75%}
 }
+
+/* HERO mobile portrait v5: larger higher orbit; A++ centered in sightline cluster. */
+@media(max-width:760px) and (orientation:portrait){
+  .hero .lab{
+    --orbit-d:clamp(325px,94vw,450px);
+    --compass-d:clamp(135px,42vw,188px);
+    --ring-x:calc(82% - var(--orbit-d)/2);
+    --ring-bottom:39svh;
+  }
+  .hero .pluspop{
+    left:28%;top:75%;bottom:auto;
+    transform:translate(-50%,-50%);
+  }
+  .hero .particle.p1{left:21%;top:71%;bottom:auto}
+  .hero .particle.p2{left:35%;top:71%;bottom:auto}
+  .hero .particle.p3{left:21%;top:79%;bottom:auto}
+  .hero .particle.p4{left:35%;top:79%;bottom:auto}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .hero .lab{--orbit-d:clamp(290px,88vw,390px);--ring-bottom:38svh}
+  .hero .pluspop{top:74%}
+  .hero .particle.p1,.hero .particle.p2{top:70%}
+  .hero .particle.p3,.hero .particle.p4{top:78%}
+}
