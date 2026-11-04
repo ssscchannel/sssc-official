@@ -828,3 +828,76 @@
   .last .about-mobile-core-title{margin-bottom:5px}
   .last .fixed-foot{bottom:1.5%;gap:5px}
 }
+
+/* ABOUT mobile portrait v2 — brand portrait, stacked core actions, lighter compact dialogs. */
+@media(max-width:760px) and (orientation:portrait){
+  .last .about blockquote{margin-bottom:26px}
+  .last .about-mobile-summary{line-height:1.58}
+  .last .about-read-more{margin:10px 0 20px}
+  .last .about-mobile-core-title{
+    display:block;font-size:15px;margin-bottom:10px;
+    letter-spacing:.025em;
+  }
+  .last .about-mobile-feature{
+    display:grid;grid-template-columns:55% 45%;
+    align-items:center;position:relative;width:100%;
+    height:clamp(164px,22svh,204px);
+  }
+  .last .about-mobile-core-links{
+    position:relative;z-index:2;display:flex;
+    flex-direction:column;justify-content:center;
+    gap:11px;align-items:stretch;
+  }
+  .last .about-core-link{
+    display:flex;align-items:center;justify-content:space-between;
+    flex:none;width:100%;min-height:42px;
+    border:1px solid #ccdbd2;border-radius:5px;
+    background:rgba(255,253,248,.9);
+    padding:9px 12px 9px 13px;
+    font-size:clamp(14px,3.9vw,16px);line-height:1.2;
+    letter-spacing:.01em;text-align:left;
+    transition:border-color .2s,background .2s;
+  }
+  .last .about-core-link span{font-size:22px;font-weight:400;line-height:.7;opacity:.7}
+  .last .about-core-link:active{background:#edf4ef}
+  .last .about-mobile-portrait{
+    position:relative;z-index:1;align-self:stretch;
+    width:122%;margin-left:-7%;
+    background:url('me.png') center bottom/contain no-repeat;
+    pointer-events:none;
+  }
+  .about-mobile-dialog[open]{
+    width:min(82vw,345px);max-width:82vw;
+    max-height:min(62svh,500px);
+    padding:17px 20px 21px;border-radius:9px;
+    border:1px solid #d5ded7;
+    box-shadow:0 12px 35px rgba(12,34,26,.16);
+  }
+  .about-mobile-dialog::backdrop{background:rgba(12,34,26,.27)}
+  .about-mobile-dialog-head{margin-bottom:8px}
+  .about-mobile-dialog-head span{font-size:10px}
+  .about-mobile-dialog-close{
+    width:28px;height:28px;display:grid;place-items:center;
+    border:none;border-radius:0;font-size:24px;font-weight:300;
+    line-height:1;
+  }
+  .about-mobile-dialog h3{
+    font-size:clamp(19px,5.1vw,23px);
+    margin:0 0 10px;line-height:1.25;
+    color:#18352c;
+  }
+  .about-mobile-dialog[data-kind="core-a"] h3{color:#d65d47}
+  .about-mobile-dialog[data-kind="core-b"] h3{color:#399b7b}
+  .about-mobile-dialog[data-kind="core-c"] h3{color:#5c9fc6}
+  .about-mobile-dialog #about-mobile-dialog-body{
+    font-size:14px;line-height:1.7;color:#52675d;
+  }
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .last .about blockquote{margin-bottom:13px}
+  .last .about-read-more{margin:6px 0 10px}
+  .last .about-mobile-core-title{margin-bottom:6px}
+  .last .about-mobile-feature{height:clamp(141px,21svh,176px)}
+  .last .about-mobile-core-links{gap:7px}
+  .last .about-core-link{min-height:37px;padding:7px 10px}
+}
