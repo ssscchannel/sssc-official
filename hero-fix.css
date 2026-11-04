@@ -450,3 +450,11 @@
     transform-origin:right center;
   }
 }
+
+/* LEARN mobile portrait v6 — keep CTA underline only slightly longer than label. */
+@media(max-width:760px) and (orientation:portrait){
+  .learn .path a::after{
+    width:calc(100% - 10px);
+    transform:scaleX(1);
+  }
+}
