@@ -429,3 +429,11 @@
   .learn .path:first-child .mark{top:45px}
   .learn .path:nth-child(2) .mark{top:45px}
 }
+
+/* LEARN mobile portrait v4 — lift only the left end of the dividing diagonal,
+   so the large QUICK TEST heading stays entirely on the rose field. */
+@media(max-width:760px) and (orientation:portrait){
+  .learn::before{
+    clip-path:polygon(0 69%,100% 43%,100% 100%,0 100%);
+  }
+}
