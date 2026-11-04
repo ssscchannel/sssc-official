@@ -1099,3 +1099,19 @@
     transform:translateY(-21px);
   }
 }
+
+/* ABOUT mobile portrait v6 — move social links up/right, enlarge teacher link. */
+@media(max-width:760px) and (orientation:portrait){
+  .last .about-mobile-social{
+    transform:translate(28px,-24px);
+    width:calc(100% - 28px);
+  }
+  .last .about-read-more{
+    font-size:clamp(15px,4vw,17px);
+    font-weight:750;
+    line-height:1.4;
+  }
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .last .about-mobile-social{transform:translate(24px,-18px);width:calc(100% - 24px)}
+}
