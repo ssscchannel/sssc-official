@@ -437,3 +437,16 @@
     clip-path:polygon(0 69%,100% 43%,100% 100%,0 100%);
   }
 }
+
+/* LEARN mobile portrait v5 — longer balanced CTA underlines. */
+@media(max-width:760px) and (orientation:portrait){
+  .learn .path a::after{
+    width:clamp(110px,31vw,140px);
+    left:0;right:auto;
+    transform:scaleX(1);
+  }
+  .learn .path:nth-child(2) a::after{
+    left:auto;right:0;
+    transform-origin:right center;
+  }
+}
