@@ -1115,3 +1115,41 @@
 @media(max-width:760px) and (orientation:portrait) and (max-height:740px){
   .last .about-mobile-social{transform:translate(24px,-18px);width:calc(100% - 24px)}
 }
+
+/* WHY/PLAY mobile portrait v4 — phone-aligned unified wiring + subtle glints over headings. */
+.play-circuit-flash{display:none}
+@media(max-width:760px) and (orientation:portrait){
+  .whyplay .play-circuit-art,.whyplay .play-circuit-flash{
+    position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:hidden;
+  }
+  .whyplay .play-circuit-art{z-index:0}
+  .whyplay .play-circuit-flash{display:block;z-index:3}
+  .whyplay .whyplay-grid{position:relative;z-index:2}
+  /* The original CSS-created extension was tied to a different coordinate system. */
+  .whyplay .playbox .btn::after{content:none!important;display:none!important}
+  .play-circuit-art .circuit-loop,.play-circuit-art #play-cta-wire{
+    stroke:#7c9f92;stroke-width:1.35;opacity:.57;fill:none;
+    stroke-linecap:round;stroke-linejoin:round;
+  }
+  .play-circuit-art .circuit-loop-flow,.play-circuit-art .circuit-cta-flow{
+    fill:none;stroke:#00d2ff;stroke-width:2.4;
+    stroke-dasharray:18 420;stroke-dashoffset:0;opacity:.8;
+    stroke-linecap:round;animation:playCircuitFlow 9s linear infinite;
+  }
+  .play-circuit-art .circuit-cta-flow{animation-delay:-2.5s}
+  .play-circuit-flash .circuit-text-wires path{
+    fill:none;stroke:#8cb4a0;stroke-width:1;opacity:.19;
+    stroke-linecap:round;stroke-linejoin:round;
+  }
+  .play-circuit-flash .circuit-text-currents path{
+    fill:none;stroke:#82e8dd;stroke-width:2.2;stroke-linecap:round;
+    stroke-dasharray:26 880;stroke-dashoffset:0;
+    opacity:.53;animation:playTextGlint 7s linear infinite;
+  }
+  .play-circuit-flash #play-text-flow-play{animation-delay:-3.5s}
+}
+@keyframes playTextGlint{to{stroke-dashoffset:-906}}
+@media(prefers-reduced-motion:reduce){
+  .play-circuit-art .circuit-loop-flow,.play-circuit-art .circuit-cta-flow,
+  .play-circuit-flash .circuit-text-currents path{animation:none;opacity:.18}
+}
