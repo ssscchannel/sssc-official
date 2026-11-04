@@ -291,3 +291,55 @@
   .play-circuit-art .circuit-battery{stroke:#a8c5b6}
   .play-circuit-art .circuit-cta-bridge{stroke:#00d2ff;opacity:.58}
 }
+
+/* LEARN mobile portrait v1: steeper lower diagonal, staggered learning routes. */
+@media(max-width:760px) and (orientation:portrait){
+  .learn{height:100svh;min-height:100svh;background:#e9e5de;isolation:isolate}
+  .learn::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:#bd7f79;
+    clip-path:polygon(0 66%,100% 47%,100% 100%,0 100%);
+    z-index:0;
+  }
+  .learn .learn-grid{
+    position:relative;width:88vw;height:100svh;z-index:1;
+  }
+  .learn .head-row{
+    position:absolute!important;inset:auto!important;
+    left:0!important;top:15%!important;width:100%!important;
+  }
+  .learn .head-row>div{position:relative;inset:auto}
+  .learn .head-row h2{
+    font-size:clamp(44px,12vw,54px);height:calc(2em + 4px);
+    margin:0;line-height:.94;
+  }
+  .learn .head-row h2 .learn-title-main{top:4px}
+  .learn .head-row h2 .learn-title-sub{top:calc(4px + .94em);transform:none}
+  .learn .paths{
+    position:absolute!important;inset:0!important;
+    height:100%!important;width:100%!important;
+  }
+  .learn .path:first-child{
+    position:absolute!important;inset:auto!important;
+    left:0!important;top:37%!important;width:100%!important;
+    padding:0!important;text-align:left;
+  }
+  .learn .path:nth-child(2){
+    position:absolute!important;inset:auto!important;
+    right:0!important;top:68%!important;width:100%!important;
+    padding:0!important;text-align:right;
+  }
+  .learn .path .num{font-size:10px;letter-spacing:.09em}
+  .learn .path h3{font-size:clamp(28px,8vw,35px);line-height:1.12;margin:20px 0 12px}
+  .learn .path p{font-size:clamp(12px,3.4vw,14px);line-height:1.55;margin:0 0 17px}
+  .learn .path a{font-size:clamp(13px,3.6vw,15px);padding:5px 0 8px}
+  .learn .path:first-child .mark{right:2%;left:auto;top:8px}
+  .learn .path:nth-child(2) .mark{right:0;left:auto;top:-12px}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .learn .head-row{top:13%!important}
+  .learn .path:first-child{top:35%!important}
+  .learn .path:nth-child(2){top:66%!important}
+  .learn .path h3{margin:14px 0 9px}
+  .learn .path p{margin-bottom:11px}
+}
