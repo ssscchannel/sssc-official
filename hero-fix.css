@@ -733,3 +733,15 @@
 @media(max-width:760px) and (orientation:portrait) and (max-height:740px){
   .classroom .course-core{top:40.5%!important}
 }
+
+/* CLASS mobile portrait v8 — subtly enlarge only the ADVANCED course title. */
+@media(max-width:760px) and (orientation:portrait){
+  .classroom .course-advanced .course-name{
+    font-size:clamp(20px,5.65vw,23px);
+  }
+}
+@media(max-width:760px) and (orientation:portrait) and (max-width:360px){
+  .classroom .course-advanced .course-name{
+    font-size:clamp(18px,5.2vw,20px);
+  }
+}
