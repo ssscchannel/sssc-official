@@ -1223,3 +1223,15 @@
     transform-origin:left center;
   }
 }
+
+/* MOBILE PAGE NAVIGATION v1 — the site uses a transformed five-screen track, not native page scroll. */
+@media(max-width:760px) and (orientation:portrait){
+  html,body{height:100%;overflow:hidden;overscroll-behavior:none}
+  html{scroll-snap-type:none;scroll-padding-top:0}
+  .viewport{height:100svh;overflow:hidden;overscroll-behavior:none}
+  .track{height:100%;transition:transform .72s cubic-bezier(.22,.78,.2,1)}
+  .screen{height:100svh;min-height:100svh;scroll-snap-align:none}
+}
+@media(max-width:760px) and (orientation:portrait) and (prefers-reduced-motion:reduce){
+  .track{transition-duration:.01ms}
+}
