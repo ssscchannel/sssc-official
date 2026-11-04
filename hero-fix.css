@@ -163,3 +163,34 @@
   .hero .particle.p1,.hero .particle.p2{top:70%}
   .hero .particle.p3,.hero .particle.p4{top:78%}
 }
+
+/* HERO mobile portrait v6: orbit shift, living compass and organic particles. */
+@keyframes heroMobileNeedleSeek{
+  0%,100%{transform:rotate(-16deg)}
+  38%{transform:rotate(15deg)}
+  62%{transform:rotate(9deg)}
+  82%{transform:rotate(-10deg)}
+}
+@media(max-width:760px) and (orientation:portrait){
+  /* Move both concentric rings together; retain v5 diameters. */
+  .hero .lab{--ring-x:calc(90% - var(--orbit-d)/2)}
+  /* The desktop pointer-following behavior remains unchanged. */
+  .hero .compass .needle{
+    animation:heroMobileNeedleSeek 5.8s ease-in-out infinite;
+    transform-origin:50% 50%;
+  }
+  /* Keep A++ fixed; loosen the four surrounding points. */
+  .hero .particle.p1{left:18%;top:70%}
+  .hero .particle.p2{left:39%;top:73%}
+  .hero .particle.p3{left:23%;top:81%}
+  .hero .particle.p4{left:41%;top:78%}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .hero .particle.p1{top:69%}
+  .hero .particle.p2{top:72%}
+  .hero .particle.p3{top:80%}
+  .hero .particle.p4{top:77%}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero .compass .needle{animation:none}
+}
