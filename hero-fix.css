@@ -1165,3 +1165,42 @@
     line-height:1.62;
   }
 }
+
+/* CLASS mobile portrait v4 — clearer, larger and consistently aligned course descriptions. */
+@media(max-width:760px) and (orientation:portrait){
+  .class-course-modal[open]{
+    width:min(92vw,460px);max-width:92vw;
+    padding:19px 20px 24px;
+  }
+  .class-course-modal #class-course-modal-content{
+    gap:21px;
+  }
+  .class-course-modal #class-course-modal-content .class-modal-course strong{
+    font-size:clamp(19px,5.1vw,22px);
+    line-height:1.43;
+    letter-spacing:.005em;
+    margin-bottom:13px;
+  }
+  .class-course-modal #class-course-modal-content .class-modal-course ul{
+    display:grid;gap:12px;
+    padding:0;margin:0;
+  }
+  .class-course-modal #class-course-modal-content .class-modal-course li{
+    position:relative;
+    padding-left:17px;
+    font-size:clamp(15px,3.9vw,16px);
+    line-height:1.78;
+    letter-spacing:.008em;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    overflow-wrap:break-word;
+  }
+  .class-course-modal #class-course-modal-content .class-modal-course li::before{
+    left:0;top:0;
+    font-size:15px;
+    line-height:1.78;
+  }
+  .class-course-modal .class-modal-course + .class-modal-course{
+    padding-top:21px;
+  }
+}
