@@ -901,3 +901,75 @@
   .last .about-mobile-core-links{gap:7px}
   .last .about-core-link{min-height:37px;padding:7px 10px}
 }
+
+/* ABOUT mobile portrait v3 — social links become the main contact rail; teacher + core in one dialog. */
+@media(max-width:760px) and (orientation:portrait){
+  .last .about-mobile-feature{
+    display:grid;grid-template-columns:49% 51%;
+    position:relative;align-items:stretch;
+    width:100%;height:clamp(220px,31svh,280px);
+    margin-top:3px;
+  }
+  .last .about-mobile-social{
+    display:flex;flex-direction:column;
+    justify-content:center;gap:0;z-index:2;min-width:0;
+  }
+  .last .about-social-row{
+    display:flex;align-items:center;gap:9px;
+    min-height:51px;padding:7px 4px 7px 0;
+    border-bottom:1px solid #d6dfd8;
+    text-decoration:none;color:#20372c;
+    background:transparent;
+    transition:color .2s,border-color .2s,transform .2s;
+  }
+  .last .about-social-row:first-child{border-top:1px solid #d6dfd8}
+  .last .about-social-mark{
+    flex:0 0 33px;width:33px;height:33px;
+    display:grid;place-items:center;
+    border:1px solid #c7d3cb;border-radius:7px;
+    background:#fffdf8;color:#315e50;
+    font-size:15px;font-weight:900;line-height:1;
+    letter-spacing:-.05em;
+  }
+  .last .about-social-row.line .about-social-mark{font-size:8px;letter-spacing:-.07em}
+  .last .about-social-row.youtube .about-social-mark{font-size:14px}
+  .last .about-social-row.facebook .about-social-mark{font:bold 20px Arial,sans-serif}
+  .last .about-social-row.instagram .about-social-mark{font-size:26px;font-weight:400}
+  .last .about-social-name{font-size:clamp(13px,3.55vw,15px);font-weight:800;white-space:nowrap}
+  .last .about-social-arrow{font-size:14px;line-height:1;margin-left:auto;color:#6b9985}
+  .last .about-social-row:active{transform:translateX(3px)}
+  .last .about-social-row:focus-visible{outline:2px solid #315e50;outline-offset:3px}
+  .last .about-mobile-portrait{
+    width:140%;height:100%;margin-left:-11%;
+    background:url('me.png') center bottom/contain no-repeat;
+    align-self:end;pointer-events:none;
+  }
+  /* These social links now appear in the content; avoid showing them twice. */
+  .last .footer-socials{display:none}
+  .last .fixed-foot{gap:6px;padding-top:10px}
+  .last .about-mobile-dialog .about-dialog-core-heading{
+    margin:18px 0 10px;padding-top:14px;
+    border-top:1px solid #dce5df;
+    color:#18352c;font-size:15px;font-weight:900;
+  }
+  .last .about-mobile-dialog .about-dialog-core-list{
+    display:grid;gap:13px;
+  }
+  .last .about-mobile-dialog .about-dialog-core-list .core{
+    display:block;color:#52675d;font-size:13px;line-height:1.6;
+  }
+  .last .about-mobile-dialog .about-dialog-core-list b{
+    display:block;font-size:14px;margin-bottom:3px;
+  }
+  .last .about-mobile-dialog .about-dialog-core-list span{
+    display:block;white-space:normal;
+  }
+  .last .about-mobile-dialog .about-dialog-core-list .core-a b{color:#d65d47}
+  .last .about-mobile-dialog .about-dialog-core-list .core-b b{color:#399b7b}
+  .last .about-mobile-dialog .about-dialog-core-list .core-c b{color:#5c9fc6}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .last .about-mobile-feature{height:clamp(185px,29svh,225px)}
+  .last .about-social-row{min-height:44px;padding:5px 3px 5px 0}
+  .last .about-social-mark{width:30px;height:30px;flex-basis:30px}
+}
