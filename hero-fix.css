@@ -1241,3 +1241,35 @@
   .viewport,.track,.screen{touch-action:pan-x}
   .class-course-modal[open],.about-mobile-dialog[open]{touch-action:pan-y}
 }
+
+/* MOBILE SCROLL v1 — abandon swipe paging; restore reliable native vertical scrolling. */
+@media(max-width:760px) and (orientation:portrait){
+  html,body{
+    height:auto!important;min-height:100%;
+    overflow-x:hidden!important;overflow-y:auto!important;
+    overscroll-behavior-y:auto!important;
+    touch-action:pan-y!important;
+  }
+  html{scroll-snap-type:none!important;scroll-behavior:auto}
+  .viewport{
+    height:auto!important;min-height:100svh;
+    overflow:visible!important;touch-action:pan-y!important;
+  }
+  .track{
+    height:auto!important;
+    transform:none!important;
+    transition:none!important;
+    will-change:auto!important;
+    touch-action:pan-y!important;
+  }
+  .screen{
+    height:100svh;min-height:100svh;
+    scroll-snap-align:none!important;
+    scroll-snap-stop:normal!important;
+    touch-action:pan-y!important;
+  }
+  .class-course-modal[open],.about-mobile-dialog[open]{
+    touch-action:pan-y!important;
+    overscroll-behavior:contain;
+  }
+}
