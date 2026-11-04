@@ -458,3 +458,90 @@
     transform:scaleX(1);
   }
 }
+
+/* CLASS mobile portrait v1 — single screen, compact courses, mascot/action zone and scroll-contained modal. */
+.class-course-modal{display:none}
+@media(max-width:760px) and (orientation:portrait){
+  .classroom{height:100svh;min-height:100svh;overflow:hidden;align-items:stretch}
+  .classroom .wrap{position:relative;width:88vw;height:100svh;margin:auto;z-index:3}
+  .classroom .section-label{position:absolute;left:0;top:14%;font-size:11px}
+  .classroom h2{position:absolute;left:0;top:18.8%;margin:0;line-height:.85}
+  .classroom .class-title-main,.classroom .class-title-sub{
+    display:block;font-size:clamp(57px,16.3vw,76px);line-height:.86;
+  }
+  .classroom .class-title-sub{transform:none}
+  .classroom .class-slash{display:none}
+  .classroom h2 .online-live{
+    position:relative;left:auto;top:auto;margin-top:14px;width:max-content;
+    font-size:clamp(14px,4vw,17px);font-weight:800;letter-spacing:.16em;
+    line-height:1.2;gap:9px;align-items:center;padding:5px 10px 5px 2px;
+    color:#315e50;
+  }
+  .classroom h2 .online-live::before{
+    width:7px;height:7px;flex:0 0 7px;margin:0;
+    box-shadow:none;animation:none;background:#d94b43;
+  }
+  .classroom .classes{position:static;display:block;inset:auto;width:100%;height:100%}
+  .classroom .course,.classroom .course+.course{
+    position:absolute;left:0;right:0;width:100%;padding:0!important;
+    margin:0;min-height:0;border:0!important;overflow:visible;
+  }
+  .classroom .course-core{top:41%}
+  .classroom .course-advanced{top:53%}
+  .classroom .course-kicker{margin:0 0 12px;font-size:10px}
+  .classroom .course-name{
+    display:block;position:relative;top:auto;max-width:100%;
+    width:max-content;font-size:clamp(15px,4.2vw,18px);
+    line-height:1.35;letter-spacing:-.045em;font-weight:900;
+    white-space:nowrap;cursor:pointer;
+    padding:4px 0 7px;border-bottom:1px dashed rgba(49,94,80,.52);
+  }
+  .classroom .course-name br,.classroom .course-name-arrow{display:none}
+  .classroom .course-name:focus-visible{outline:2px solid #315e50;outline-offset:4px}
+  .classroom .course-name::after{
+    content:"點選查看介紹";font-size:10px;font-weight:500;
+    color:#5d766c;letter-spacing:.02em;
+    position:absolute;right:0;top:100%;white-space:nowrap;
+  }
+  .classroom .course-info,.classroom .course:nth-child(2) .course-info,
+  .classroom .course:hover .course-info,.classroom .course:focus-within .course-info{
+    display:none!important;
+  }
+  .classroom .course-online{top:auto;bottom:13%;left:auto;right:0;width:61%!important}
+  .classroom .course-actions{gap:15px;min-width:0;width:100%;align-items:flex-start}
+  .classroom .course-actions-label{font-size:10px}
+  .classroom .course-actions-row{display:flex;flex-wrap:wrap;gap:12px 18px;width:100%}
+  .classroom .course-action{font-size:clamp(14px,3.8vw,17px);padding-bottom:6px}
+  .classroom::after{
+    right:auto;left:1.8vw;top:auto;bottom:9%;
+    width:36vw;height:28svh;opacity:1;
+    background-position:center bottom;
+  }
+  .class-course-modal[open]{
+    display:block;position:fixed;inset:0;
+    width:min(90vw,460px);max-width:90vw;
+    max-height:min(78svh,690px);height:auto;
+    margin:auto;padding:22px 22px 26px;
+    background:#eff4eb;color:#18352c;border:1px solid #99b7a8;
+    border-top:4px solid #5b9c86;border-radius:12px;
+    box-shadow:0 18px 60px rgba(10,35,24,.25);
+    overflow-y:auto;overscroll-behavior:contain;z-index:999;
+  }
+  .class-course-modal::backdrop{background:rgba(12,34,26,.53)}
+  .class-modal-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:12px}
+  .class-modal-head>span{font-size:10px;letter-spacing:.15em;font-weight:800;color:#597967}
+  .class-modal-close{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border:1px solid #8cae9b;border-radius:50%;background:transparent;color:#18352c;font-size:26px;line-height:1;cursor:pointer}
+  .class-course-modal #class-course-modal-content strong{display:block;font-size:20px;line-height:1.4;margin-bottom:16px}
+  .class-course-modal #class-course-modal-content>.course-info-label{display:none}
+  .class-course-modal ul{list-style:none;display:grid;gap:12px;padding:0;margin:0}
+  .class-course-modal li{position:relative;padding-left:17px;font-size:14px;line-height:1.7;color:#315e50}
+  .class-course-modal li::before{content:"•";position:absolute;left:0;color:#5b9c86}
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:740px){
+  .classroom .section-label{top:12%}
+  .classroom h2{top:17%}
+  .classroom .course-core{top:40%}
+  .classroom .course-advanced{top:52%}
+  .classroom .course-online{bottom:10%}
+  .classroom::after{bottom:7%;height:26svh}
+}
