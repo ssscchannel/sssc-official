@@ -1510,3 +1510,20 @@
   }
   .last .fixed-foot{margin-top:0!important}
 }
+
+/* Mobile version indicator v62 — utilities only; no changes to page layouts. */
+.site-version-widget{display:none}
+@media (max-width:760px) and (orientation:portrait){
+  .site-version-widget{display:block;position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:800;font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif}
+  .site-version-trigger{appearance:none;border:1px solid rgba(49,94,80,.25);border-radius:999px;background:rgba(255,253,248,.92);color:#315e50;box-shadow:0 2px 9px rgba(0,0,0,.08);font:700 10px/1.1 system-ui,sans-serif;padding:7px 10px;min-height:29px;cursor:pointer}
+  .site-version-trigger.outdated{background:#f6e8cb;border-color:#b69052}
+  .site-version-panel[hidden]{display:none!important}
+  .site-version-panel{position:absolute;right:0;bottom:calc(100% + 9px);width:min(285px,calc(100vw - 24px));background:#fffdf8;color:#16231f;border:1px solid #c7d3cb;border-radius:10px;box-shadow:0 10px 32px rgba(0,0,0,.16);padding:16px;font-size:13px;line-height:1.5}
+  .site-version-panel strong{font-size:15px;display:block;margin-bottom:8px}
+  .site-version-row{display:flex;justify-content:space-between;gap:12px;margin:5px 0}
+  .site-version-panel p{font-size:12px;color:#53685d;margin:9px 0}
+  .site-version-actions{display:flex;flex-wrap:wrap;gap:7px}
+  .site-version-actions button{border:1px solid #a8bdb0;background:#edf4ef;color:#234c39;border-radius:6px;padding:8px 9px;font:700 12px/1.3 inherit;cursor:pointer}
+  .site-version-actions button[hidden]{display:none!important}
+  .site-version-actions button:disabled{opacity:.55}
+}
