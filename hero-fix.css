@@ -1861,3 +1861,22 @@
     .nav .logo{cursor:pointer;touch-action:manipulation}
   }
 }
+
+/* SAFARI WHYPLAY COMPACT TOP v78 — remove forced height that vertically centers content.
+   Match approved PWA top spacing while keeping all WHY/PLAY items intact. */
+@supports (-webkit-touch-callout:none){
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser){
+    .whyplay{
+      height:auto!important;
+      min-height:0!important;
+      align-items:flex-start!important;
+      padding-top:clamp(44px,12vw,60px)!important;
+      padding-bottom:clamp(90px,20vw,135px)!important;
+    }
+    .whyplay .whyplay-grid{
+      height:auto!important;
+      margin-top:0!important;
+      margin-bottom:0!important;
+    }
+  }
+}
