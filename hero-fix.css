@@ -1537,3 +1537,11 @@
     position:relative;z-index:9;
   }
 }
+
+/* PWA HERO v64 — lower PLAY by 55px without lengthening the section; fixed logo shortcut. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .hero{padding-bottom:clamp(10px,calc(16vw - 55px),37px)!important}
+  .hero .start{margin-top:calc(clamp(335px,94vw,430px) + 55px)!important}
+  .nav .logo{cursor:pointer;touch-action:manipulation}
+  .nav{position:fixed!important}
+}
