@@ -1414,3 +1414,99 @@
   .last .about-mobile-feature{height:235px}
   .last .about-mobile-social{transform:translate(28px,-8px);width:calc(100% - 28px)}
 }
+
+/* PWA CONTENT FLOW v61 — first structural pass, standalone portrait ONLY.
+   Remove screen-sized section locks, keep normal document scrolling.
+   Do not apply to browser mode or desktop. Further visual refinements follow testing. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  html{scroll-snap-type:none!important;scroll-behavior:auto!important}
+  body,.viewport,.track{height:auto!important;min-height:0!important}
+  .viewport,.track{overflow:visible!important}
+  .track{transform:none!important}
+  .screen,
+  .hero,.whyplay,.learn,.classroom,.last{
+    height:auto!important;min-height:0!important;
+    scroll-snap-align:none!important;
+    scroll-snap-stop:normal!important;
+  }
+  /* HERO: retain composition and an intentional spacious bottom, not viewport height. */
+  .hero{
+    display:block!important;
+    padding-top:clamp(116px,15vw,148px)!important;
+    padding-bottom:clamp(420px,112vw,520px)!important;
+  }
+  .hero .lab{--ring-bottom:clamp(280px,78vw,350px)}
+  .hero-mascot.head{bottom:clamp(65px,18vw,110px)}
+  /* WHY/PLAY: natural content determines section height. */
+  .whyplay{
+    padding-block:clamp(110px,24vw,160px) clamp(90px,20vw,135px)!important;
+    overflow:hidden;
+  }
+  .whyplay .whyplay-grid{height:auto!important}
+  /* LEARN: replace height-based absolute placement with a content-flow stack. */
+  .learn{
+    display:block!important;
+    padding-block:clamp(104px,25vw,140px) clamp(105px,26vw,145px)!important;
+  }
+  .learn .learn-grid{
+    height:auto!important;min-height:0!important;
+    display:block!important;
+  }
+  .learn .head-row{
+    position:relative!important;inset:auto!important;
+    top:auto!important;left:auto!important;width:100%!important;
+    margin-bottom:clamp(55px,14vw,78px)!important;
+  }
+  .learn .paths{
+    display:flex!important;flex-direction:column!important;
+    align-items:stretch;gap:clamp(58px,16vw,85px);
+    position:relative!important;inset:auto!important;
+    width:100%!important;height:auto!important;
+  }
+  .learn .path:first-child,.learn .path:nth-child(2){
+    position:relative!important;inset:auto!important;
+    top:auto!important;bottom:auto!important;
+    left:auto!important;right:auto!important;
+    width:100%!important;
+  }
+  /* CLASS: put headings, both courses, and action links back into document flow. */
+  .classroom{
+    display:block!important;overflow:hidden;
+    padding-block:clamp(105px,25vw,140px) 275px!important;
+  }
+  .classroom .wrap{
+    width:88vw;height:auto!important;min-height:0!important;
+    position:relative;
+  }
+  .classroom .section-label,.classroom h2{
+    position:relative!important;inset:auto!important;
+    left:auto!important;top:auto!important;
+  }
+  .classroom h2{margin:24px 0 70px!important}
+  .classroom .classes{
+    display:flex!important;flex-direction:column;
+    gap:clamp(44px,11vw,62px);
+    height:auto!important;width:100%!important;
+  }
+  .classroom .course,.classroom .course+.course{
+    position:relative!important;inset:auto!important;
+    top:auto!important;bottom:auto!important;
+    left:auto!important;right:auto!important;
+    width:100%!important;height:auto!important;
+  }
+  .classroom .course-online{
+    width:100%!important;margin-top:15px!important;
+    padding-left:45%!important;
+  }
+  .classroom::after{
+    bottom:28px!important;height:235px;width:min(58vw,250px);
+  }
+  /* ABOUT: footer follows content instead of occupying a fixed screen edge. */
+  .last{display:block!important;overflow:visible!important}
+  .last .last-grid{
+    height:auto!important;min-height:0!important;
+    padding-top:clamp(102px,24vw,132px);
+    padding-bottom:26px;gap:clamp(28px,7vw,42px);
+  }
+  .last .fixed-foot{margin-top:0!important}
+}
