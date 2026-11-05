@@ -58,3 +58,12 @@
 - **最後一次視覺驗收基準：v81**（commit `cf02482c2df9b681a42f40ec823b9cc006e88676`）。
 - 移除未由正式首頁載入的單獨測試頁 `hero-mascot-preview.html`。如需找回，可從 Git 歷史還原。
 - 此次整理**不更改正式網站 HTML／CSS／JS 或圖片**，避免影響已定案的畫面。
+
+## 搜尋曝光基礎（v83）
+
+- 官網首頁使用一致的品牌標題、摘要、canonical URL 及社群分享預覽資訊。
+- 網站地圖：`https://ssscchannel.github.io/sssc-official/sitemap.xml`，只列正式首頁；同頁五個區塊的錨點不另列為獨立網頁。
+- **注意：這個網站位於 `github.io` 的子路徑**，不能以專案根目錄的 `robots.txt` 控制整個 `ssscchannel.github.io` 網域，所以不自行新增可能無效的 robots.txt。索引及收錄須透過 Google Search Console 確認。
+- 下一步：至 https://search.google.com/search-console/ 新增網址前置字元資源 `https://ssscchannel.github.io/sssc-official/`，完成擁有權驗證，提交 `sitemap.xml`，查看網址檢查結果。擁有權驗證需要管理者使用自己的 Google 帳號完成。
+- 結構化 `WebSite`「搜尋結果網站名稱」不支援此子路徑作為獨立網站名稱；若日後改為自訂網域，可再評估。
+- SEO 設定不保證立刻收錄或提升排名，且未經 Search Console 驗證前不宣稱已被 Google 收錄。
