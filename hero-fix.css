@@ -1725,3 +1725,30 @@
   .classroom .course-name,
   .classroom .course-advanced .course-name{font-size:clamp(12px,3.45vw,13px)!important}
 }
+
+/* PWA ABOUT COMPOSITION v73 — polished content-led spacing and portrait/social balance.
+   Standalone mobile only. Leave desktop, browser, content and dialog behavior intact. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .last .last-grid{
+    padding-top:clamp(118px,30vw,138px)!important;
+    padding-bottom:clamp(22px,5vw,30px)!important;
+    gap:clamp(22px,5vw,30px)!important;
+  }
+  .last .about .section-label{margin-bottom:clamp(15px,4vw,21px)}
+  .last .about blockquote{
+    font-size:clamp(28px,8.1vw,35px);
+    line-height:1.09;
+    margin-bottom:clamp(21px,5vw,28px)!important;
+  }
+  .last .about-mobile-summary{line-height:1.52}
+  .last .about-read-more{margin:clamp(7px,2vw,10px) 0 clamp(13px,3.4vw,18px)!important}
+  .last .about-mobile-feature{
+    height:clamp(220px,61vw,284px)!important;
+    margin-top:0;
+  }
+  .last .about-mobile-social{justify-content:center;gap:clamp(6px,1.7vw,10px)}
+  .last .about-social-row{min-height:clamp(40px,11vw,46px);padding:5px 0}
+  .last .fixed-foot{margin-top:clamp(8px,2vw,14px)!important}
+  .last .about-mobile-tagline{padding-bottom:clamp(7px,1.8vw,10px)}
+  .last .footer-brand{padding-top:clamp(8px,2vw,11px)}
+}
