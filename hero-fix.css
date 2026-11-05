@@ -2014,3 +2014,83 @@
     .classroom::after{left:-5vw!important;width:60vw!important}
   }
 }
+
+/* SAFARI ABOUT CONTENT FLOW AND TRADEMARK v81 — match approved PWA composition.
+   Reduce oversized top, leave safe footer breathing room and show logo beside company info.
+   Safari browser portrait only; standalone PWA and desktop untouched. */
+@supports (-webkit-touch-callout:none){
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser){
+    .last{
+      height:auto!important;min-height:0!important;
+      overflow:visible!important;
+    }
+    .last .last-grid{
+      display:flex!important;
+      flex-direction:column!important;
+      justify-content:flex-start!important;
+      width:88vw!important;
+      height:auto!important;min-height:0!important;
+      padding-top:clamp(44px,12vw,60px)!important;
+      padding-bottom:calc(clamp(65px,16vw,84px) + env(safe-area-inset-bottom,0px))!important;
+      gap:clamp(14px,3.5vw,20px)!important;
+    }
+    .last .about{
+      position:relative!important;inset:auto!important;
+      padding-top:0!important;margin-top:0!important;
+    }
+    .last .about .section-label{margin-bottom:clamp(12px,3vw,16px)}
+    .last .about blockquote{
+      font-size:clamp(28px,8.1vw,35px);
+      line-height:1.09;
+      margin-bottom:clamp(21px,5vw,28px)!important;
+    }
+    .last .about-mobile-summary{line-height:1.52}
+    .last .about-read-more{
+      margin:clamp(7px,2vw,10px) 0 clamp(13px,3.4vw,18px)!important;
+    }
+    .last .about-mobile-feature{
+      height:clamp(205px,57vw,265px)!important;
+      margin-top:0;
+    }
+    .last .about-mobile-social{gap:clamp(4px,1.3vw,8px)}
+    .last .about-social-row{min-height:clamp(40px,11vw,46px);padding:5px 0}
+    .last .fixed-foot{
+      position:relative!important;inset:auto!important;
+      margin-top:clamp(8px,2vw,12px)!important;
+      gap:0!important;
+    }
+    .last .about-mobile-tagline{
+      padding:0 0 clamp(14px,3.7vw,20px)!important;
+      line-height:1.55;
+    }
+    .last .footer-brand{
+      display:flex!important;
+      flex-direction:row!important;
+      justify-content:center!important;
+      align-items:center!important;
+      width:100%!important;
+      gap:clamp(7px,2.2vw,12px)!important;
+      padding-top:clamp(14px,3.5vw,18px)!important;
+    }
+    .last .footer-trademark{
+      display:block!important;visibility:visible!important;opacity:1!important;
+      width:clamp(30px,8.5vw,38px)!important;
+      max-width:38px!important;
+      height:clamp(30px,8.5vw,38px)!important;
+      object-fit:contain;
+      flex:0 0 auto!important;
+      margin:0!important;
+    }
+    .last .footer-left{
+      width:auto!important;min-width:0!important;
+      text-align:left!important;
+      font-size:clamp(9px,2.5vw,11px)!important;
+      line-height:1.45!important;
+      overflow-wrap:anywhere;
+    }
+    .last .footer-copyright{
+      margin-top:clamp(9px,2.3vw,13px)!important;
+      line-height:1.55;
+    }
+  }
+}
