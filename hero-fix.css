@@ -1527,3 +1527,13 @@
   .site-version-actions button[hidden]{display:none!important}
   .site-version-actions button:disabled{opacity:.55}
 }
+
+/* PWA HERO PLAY POSITION v63 — restore lower CTA without viewport-height locking. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .hero{padding-bottom:clamp(65px,16vw,92px)!important}
+  .hero .start{
+    margin-top:clamp(335px,94vw,430px)!important;
+    margin-bottom:0!important;
+    position:relative;z-index:9;
+  }
+}
