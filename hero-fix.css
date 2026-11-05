@@ -1785,3 +1785,39 @@
     object-fit:contain;flex:0 0 58px;
   }
 }
+
+/* PWA ABOUT HEADER AND TRADEMARK v75 — align section top to other content pages,
+   and expose the existing company trademark above uncluttered footer details. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .last .last-grid{
+    padding-top:clamp(44px,12vw,60px)!important;
+    gap:clamp(14px,3.5vw,20px)!important;
+  }
+  .last .about{padding-top:0!important;margin-top:0!important}
+  .last .fixed-foot{margin-top:clamp(8px,2vw,12px)!important}
+  .last .footer-brand{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:clamp(8px,2.4vw,12px)!important;
+    width:100%;
+  }
+  .last .footer-trademark{
+    display:block!important;
+    visibility:visible!important;
+    opacity:1!important;
+    width:clamp(38px,11vw,48px)!important;
+    max-width:48px!important;
+    height:clamp(38px,11vw,48px)!important;
+    flex:0 0 auto!important;
+    object-fit:contain;
+    margin:0 auto;
+  }
+  .last .footer-left{
+    width:100%;
+    text-align:center;
+    line-height:1.55!important;
+  }
+  .last .footer-copyright{margin-top:clamp(9px,2.3vw,13px)!important}
+}
