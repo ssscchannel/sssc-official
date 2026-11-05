@@ -1316,3 +1316,21 @@
     }
   }
 }
+
+/* SAFARI ABOUT v59 — horizontal-only refinements; leave PWA and desktop untouched. */
+@supports (-webkit-touch-callout: none){
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser){
+    .last .about-mobile-portrait{transform:translate(-12px,-35px) scale(.92)}
+    .last .about-mobile-social{
+      transform:translate(48px,-24px);
+      width:calc(100% - 48px);
+    }
+  }
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser) and (max-height:740px){
+    .last .about-mobile-portrait{transform:translate(-12px,-26px) scale(.92)}
+    .last .about-mobile-social{
+      transform:translate(44px,-18px);
+      width:calc(100% - 44px);
+    }
+  }
+}
