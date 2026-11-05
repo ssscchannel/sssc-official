@@ -1573,3 +1573,8 @@
     gap:clamp(38px,11vw,58px)!important;
   }
 }
+
+/* PWA LEARN TOP SPACING v68 — match WHY/PLAY top padding only. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .learn{padding-top:clamp(44px,12vw,60px)!important}
+}
