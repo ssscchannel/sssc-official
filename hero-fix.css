@@ -1847,3 +1847,17 @@
     overflow-wrap:anywhere;
   }
 }
+
+/* SAFARI HERO WHITE TAIL AND LOGO v77 — mirror approved PWA behavior in iPhone Safari only.
+   No changes to standalone PWA, desktop, or HERO foreground composition. */
+@supports (-webkit-touch-callout: none){
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser){
+    .hero{
+      --safari-hero-white-tail:160px;
+      margin-bottom:var(--safari-hero-white-tail)!important;
+      box-shadow:0 var(--safari-hero-white-tail) 0 0 #fffdf8;
+    }
+    .nav{position:fixed!important}
+    .nav .logo{cursor:pointer;touch-action:manipulation}
+  }
+}
