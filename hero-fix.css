@@ -1285,3 +1285,13 @@
     .learn .path:nth-child(2){top:61%!important}
   }
 }
+
+/* SAFARI CLASS TITI v57 — reduce mascot dimensions 5% only in iPhone browser mode. */
+@supports (-webkit-touch-callout: none){
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser){
+    .classroom::after{width:63.65vw;height:40.85svh}
+  }
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser) and (max-height:740px){
+    .classroom::after{width:60.8vw;height:37.05svh}
+  }
+}
