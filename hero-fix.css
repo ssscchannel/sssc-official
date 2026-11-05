@@ -1545,3 +1545,13 @@
   .nav .logo{cursor:pointer;touch-action:manipulation}
   .nav{position:fixed!important}
 }
+
+/* PWA HERO BACKGROUND TAIL v65 — visually extend only the white area.
+   Keep section sizing and every HERO item at its current position. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .hero{
+    --hero-white-tail:120px;
+    margin-bottom:var(--hero-white-tail)!important;
+    box-shadow:0 var(--hero-white-tail) 0 0 #fffdf8;
+  }
+}
