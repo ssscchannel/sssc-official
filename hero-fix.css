@@ -1561,3 +1561,15 @@
 @media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
   .whyplay{padding-top:clamp(44px,12vw,60px)!important}
 }
+
+/* PWA LEARN SPACING v67 — compact the section without changing typography or ornaments.
+   Fluid width-based spacing is shared by all standalone portrait phone widths. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .learn{
+    padding-top:clamp(68px,18vw,96px)!important;
+    padding-bottom:clamp(54px,14vw,76px)!important;
+  }
+  .learn .paths{
+    gap:clamp(38px,11vw,58px)!important;
+  }
+}
