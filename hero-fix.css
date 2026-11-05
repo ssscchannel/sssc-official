@@ -1666,3 +1666,19 @@
   .classroom .course-advanced .course-name{font-size:clamp(14px,4vw,15px)!important}
   .classroom::after{left:-5vw!important;width:46vw!important}
 }
+
+/* PWA CLASS BALANCE v70 — shift right information rail, enlarge left Titi.
+   Preserve typography, two-line course names, and interaction. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .classroom .classes{
+    transform:translateX(clamp(8px,2.4vw,13px));
+  }
+  .classroom::after{
+    width:clamp(175px,55vw,268px)!important;
+    height:clamp(245px,76vw,385px)!important;
+  }
+}
+@media (max-width:360px) and (orientation:portrait) and (display-mode:standalone){
+  .classroom .classes{transform:translateX(6px)}
+  .classroom::after{width:53vw!important}
+}
