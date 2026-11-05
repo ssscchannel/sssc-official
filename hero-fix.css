@@ -1295,3 +1295,24 @@
     .classroom::after{width:60.8vw;height:37.05svh}
   }
 }
+
+/* SAFARI ABOUT v58 — preserve approved PWA; reduce portrait 8%, add foot clearance, shift social rail 10px right. */
+@supports (-webkit-touch-callout: none){
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser){
+    .last .about-mobile-portrait{
+      transform:translateY(-35px) scale(.92);
+      transform-origin:center bottom;
+    }
+    .last .about-mobile-social{
+      transform:translate(38px,-24px);
+      width:calc(100% - 38px);
+    }
+  }
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser) and (max-height:740px){
+    .last .about-mobile-portrait{transform:translateY(-26px) scale(.92)}
+    .last .about-mobile-social{
+      transform:translate(34px,-18px);
+      width:calc(100% - 34px);
+    }
+  }
+}
