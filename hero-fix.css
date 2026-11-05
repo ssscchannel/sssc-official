@@ -1682,3 +1682,20 @@
   .classroom .classes{transform:translateX(6px)}
   .classroom::after{width:53vw!important}
 }
+
+/* PWA CLASS BALANCE v71 — more room for enlarged Titi; right rail shifts inward safely.
+   Use fluid widths, preserve two-line course names and all actions. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .classroom .classes{
+    width:55%!important;
+    transform:translateX(clamp(7px,1.9vw,11px));
+  }
+  .classroom::after{
+    width:clamp(200px,63vw,305px)!important;
+    height:clamp(280px,87vw,425px)!important;
+  }
+}
+@media (max-width:360px) and (orientation:portrait) and (display-mode:standalone){
+  .classroom .classes{width:57%!important;transform:translateX(5px)}
+  .classroom::after{width:60vw!important}
+}
