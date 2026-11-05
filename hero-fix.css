@@ -2094,3 +2094,9 @@
     }
   }
 }
+
+/* Version widget v82: hidden normally; available only when requested. */
+@media(max-width:760px) and (orientation:portrait){
+  .site-version-widget{display:none!important}
+  .site-version-widget.version-visible{display:block!important}
+}
