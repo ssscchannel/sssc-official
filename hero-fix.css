@@ -1555,3 +1555,9 @@
     box-shadow:0 var(--hero-white-tail) 0 0 #fffdf8;
   }
 }
+
+/* PWA WHY/PLAY TOP SPACING v66 — reduce only the empty space above WHY.
+   Keep all content, circuit, button and internal spacing unchanged. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .whyplay{padding-top:clamp(44px,12vw,60px)!important}
+}
