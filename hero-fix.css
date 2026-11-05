@@ -1752,3 +1752,36 @@
   .last .about-mobile-tagline{padding-bottom:clamp(7px,1.8vw,10px)}
   .last .footer-brand{padding-top:clamp(8px,2vw,11px)}
 }
+
+/* ABOUT PWA AND DESKTOP FOOTER v74 — user review:
+   tighten the mobile top, feature whitespace and loosen footer metadata;
+   ensure the existing trademark image is visible before company details on desktop. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .last .last-grid{
+    padding-top:clamp(74px,19vw,88px)!important;
+    padding-bottom:clamp(25px,6vw,34px)!important;
+    gap:clamp(10px,2.8vw,16px)!important;
+  }
+  .last .about .section-label{margin-bottom:clamp(12px,3vw,16px)}
+  .last .about-mobile-feature{
+    height:clamp(205px,57vw,265px)!important;
+  }
+  .last .about-mobile-social{gap:clamp(4px,1.3vw,8px)}
+  .last .fixed-foot{margin-top:0!important;gap:0!important}
+  .last .about-mobile-tagline{
+    padding:0 0 clamp(14px,3.7vw,20px)!important;
+    line-height:1.55;
+  }
+  .last .footer-brand{padding-top:clamp(14px,3.5vw,18px)!important}
+  .last .footer-left{line-height:1.65;letter-spacing:0}
+  .last .footer-copyright{margin-top:clamp(12px,3vw,17px)!important;line-height:1.55}
+}
+/* Desktop: make the existing company trademark visibly occupy the leading footer slot. */
+@media (min-width:761px){
+  .last .footer-brand{display:flex;align-items:center;gap:16px}
+  .last .footer-trademark{
+    display:block!important;visibility:visible!important;opacity:1!important;
+    width:58px!important;max-width:58px!important;height:58px!important;
+    object-fit:contain;flex:0 0 58px;
+  }
+}
