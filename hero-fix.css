@@ -1578,3 +1578,91 @@
 @media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
   .learn{padding-top:clamp(44px,12vw,60px)!important}
 }
+
+/* PWA CLASS RIGHT RAIL v69 — content-led two-column composition.
+   Titi stays to the left; CORE, ADVANCED and INFORMATION flow together on right.
+   Mobile standalone only; desktop and Safari untouched. */
+@media (max-width:760px) and (orientation:portrait) and (display-mode:standalone){
+  .classroom{
+    display:block!important;
+    position:relative;
+    padding-top:clamp(44px,12vw,60px)!important;
+    padding-bottom:clamp(55px,14vw,78px)!important;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .classroom .wrap{height:auto!important;min-height:0!important;z-index:3}
+  .classroom .section-label{position:relative!important;top:auto!important;left:auto!important}
+  .classroom h2{
+    position:relative!important;inset:auto!important;
+    margin:clamp(20px,5vw,28px) 0 clamp(42px,11vw,60px)!important;
+  }
+  .classroom .classes{
+    display:flex!important;
+    flex-direction:column!important;
+    position:relative!important;inset:auto!important;
+    width:59%!important;height:auto!important;
+    margin:0 0 0 auto!important;
+    align-items:stretch!important;
+    gap:clamp(21px,5.7vw,31px)!important;
+  }
+  .classroom .course,.classroom .course+.course{
+    position:relative!important;inset:auto!important;
+    width:100%!important;min-height:0!important;
+    margin:0!important;padding:0!important;
+    align-self:stretch;
+  }
+  .classroom .course-kicker{
+    font-size:clamp(9px,2.4vw,11px);
+    margin:0 0 clamp(6px,1.5vw,9px)!important;
+  }
+  .classroom .course-name,
+  .classroom .course-advanced .course-name{
+    display:block!important;
+    width:100%!important;max-width:100%!important;
+    font-size:clamp(15px,4.1vw,18px)!important;
+    line-height:1.35!important;
+    letter-spacing:-.055em!important;
+    white-space:nowrap!important;
+    padding:3px 0 8px!important;
+    cursor:pointer;
+  }
+  .classroom .course-core .course-name br,
+  .classroom .course-advanced .course-name br{display:initial!important}
+  .classroom .course-name::after{
+    font-size:clamp(9px,2.4vw,11px)!important;
+    margin-left:4px!important;
+  }
+  .classroom .course-online{
+    width:100%!important;
+    padding:0!important;
+    margin:0!important;
+  }
+  .classroom .course-actions{width:100%;gap:clamp(7px,1.8vw,10px)}
+  .classroom .course-actions-row{
+    display:flex;flex-direction:column;align-items:flex-start;
+    gap:clamp(7px,1.8vw,11px);
+  }
+  .classroom .course-action{
+    font-size:clamp(14px,3.65vw,17px)!important;
+    line-height:1.3;
+    padding:4px 0 6px;
+  }
+  .classroom::after{
+    left:-3vw!important;right:auto!important;top:auto!important;
+    bottom:clamp(45px,12vw,74px)!important;
+    width:clamp(148px,48vw,232px)!important;
+    height:clamp(215px,66vw,330px)!important;
+    transform:scaleX(-1);
+    background-position:center bottom;
+    background-size:contain;
+    pointer-events:none;
+    z-index:1;
+  }
+}
+@media (max-width:360px) and (orientation:portrait) and (display-mode:standalone){
+  .classroom .classes{width:61%!important}
+  .classroom .course-name,
+  .classroom .course-advanced .course-name{font-size:clamp(14px,4vw,15px)!important}
+  .classroom::after{left:-5vw!important;width:46vw!important}
+}
