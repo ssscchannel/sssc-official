@@ -1273,3 +1273,15 @@
     overscroll-behavior:contain;
   }
 }
+
+/* SAFARI LEARN v56 — move both learning routes down equally; preserve standalone PWA and desktop. */
+@supports (-webkit-touch-callout: none){
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser){
+    .learn .path:first-child{top:35%!important}
+    .learn .path:nth-child(2){top:63%!important}
+  }
+  @media (max-width:760px) and (orientation:portrait) and (display-mode:browser) and (max-height:740px){
+    .learn .path:first-child{top:34%!important}
+    .learn .path:nth-child(2){top:61%!important}
+  }
+}
