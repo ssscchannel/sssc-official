@@ -67,3 +67,12 @@
 - 下一步：至 https://search.google.com/search-console/ 新增網址前置字元資源 `https://ssscchannel.github.io/sssc-official/`，完成擁有權驗證，提交 `sitemap.xml`，查看網址檢查結果。擁有權驗證需要管理者使用自己的 Google 帳號完成。
 - 結構化 `WebSite`「搜尋結果網站名稱」不支援此子路徑作為獨立網站名稱；若日後改為自訂網域，可再評估。
 - SEO 設定不保證立刻收錄或提升排名，且未經 Search Console 驗證前不宣稱已被 Google 收錄。
+
+## 訪客統計（v84）
+
+- Google Analytics 4：評估 ID `G-FY4LP286KW`，以 Google 官方網站代碼直接安裝於 `index.html`。此識別碼是公開網站量測設定，不是密碼。
+- 自動收集：頁面瀏覽、造訪來源、裝置等（GA4 預設與加強型評估依後台設定）。
+- 自訂事件：`portal_click`（參數 `destination` 與 `section`）記錄進入大廳、考古題、速測、課程影片、LINE／社群；`course_details_open`（參數 `course_type`）記錄課程說明；`teacher_details_open` 記錄教師介紹。
+- 不蒐集姓名、電話、輸入欄位內容或其他個人識別資料至自訂事件。網站尚未建立獨立的隱私聲明／同意管理機制；正式營運時應檢視適用的告知與同意要求。
+- 預設加強型評估可能另行記錄站外點擊，因此 `portal_click` 是自訂用途事件，不應直接加總當作不重複的站外點擊量。
+- 部署後到 GA4「即時」與「DebugView」確認事件是否實際送達。GitHub 寫入成功不代表 GA4 已收到資料。
