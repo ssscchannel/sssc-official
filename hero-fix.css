@@ -2127,3 +2127,9 @@
  .privacy-consent-actions button{flex:1 1 45%;min-height:42px;padding:9px}
  .privacy-footer-links{justify-content:center;gap:18px;margin-top:8px;font-size:10px}
 }
+
+
+/* ABOUT DESKTOP PORTRAIT CLEARANCE — lift illustration 18px above footer rule. */
+@media (min-width: 761px) {
+  .last::before { transform: translateY(-18px); }
+}
